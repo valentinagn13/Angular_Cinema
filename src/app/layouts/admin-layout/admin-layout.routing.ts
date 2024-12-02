@@ -5,6 +5,7 @@ import { IconsComponent } from "../../pages/icons/icons.component";
 import { MapsComponent } from "../../pages/maps/maps.component";
 import { UserProfileComponent } from "../../pages/user-profile/user-profile.component";
 import { TablesComponent } from "../../pages/tables/tables.component";
+import { AuthenticatedGuard } from "src/app/guards/authenticated.guard";
 
 export const AdminLayoutRoutes: Routes = [
   { path: "dashboard", component: DashboardComponent },
@@ -14,6 +15,7 @@ export const AdminLayoutRoutes: Routes = [
   { path: "maps", component: MapsComponent },
   {
     path: "theaters", //*CUANDO SE PONGA TEATROS ACTIVAR... REDIRIGIR A OTRA TORRE DE CONTROL
+    canActivate: [AuthenticatedGuard],
     children: [
       {
         path: "",

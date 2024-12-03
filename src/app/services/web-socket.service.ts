@@ -9,7 +9,7 @@ export class WebSocketService extends Socket {
   callback: EventEmitter<any> = new EventEmitter();
 
   nameEvent: string;
-  //  A DONDE ME VOY A CONECTAR Y QUE VA EN LA QUERY
+  //  A DONDE ME VOY A CONECTAR Y QUE VA EN LA QUERY hi
   constructor(private securityService: SecurityService) {
     super({
       url: environment.url_ms_cinema,
